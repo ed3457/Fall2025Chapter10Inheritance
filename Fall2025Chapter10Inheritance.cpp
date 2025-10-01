@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "Employee.h"
-#include "Person.h"
+
 int main()
 {
     Person James("007", "James Bond", "UK");
@@ -13,6 +13,11 @@ int main()
     James.printInfo();
 
     M.printInfo();
+
+
+    Person *James1 = new Person("007", "James Bond", "UK");
+
+    Person* M1 = new Employee ("12442", "M", "London", 200000, "Head of R&D");
 
 }
 
