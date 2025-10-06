@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include "Employee.h"
-
+#include "Manager.h"
 int main()
 {
    /* Person James("007", "James Bond", "UK");
@@ -19,16 +19,18 @@ int main()
 
     Person* M1 = new Employee ("12442", "M", "London", 200000, "Head of R&D");
 
+    
+
    // James1->printInfo();
 
     //M1->printInfo();// dynamic binding 
 
-    Person** list1 = new Person * [2];
+    Person** list1 = new Person * [3];
 
     list1[0] = James1;
     list1[1] = M1; 
-
-    for (int i = 0; i < 2; i++)
+    list1[2] = new Manager("324234", "Sam", "Spain", 40000, "CEO", 200000);
+    for (int i = 0; i < 3; i++)
     {   
         list1[i]->printInfo();
         cout << endl; 
