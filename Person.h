@@ -17,7 +17,7 @@ public:
 	void setAddress(string a);
 	string getAddress();
 
-	void printInfo();
+	virtual void printInfo();
 	Person();
 	Person(string s, string n, string a);
 

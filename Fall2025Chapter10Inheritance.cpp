@@ -6,19 +6,33 @@
 
 int main()
 {
-    Person James("007", "James Bond", "UK");
+   /* Person James("007", "James Bond", "UK");
 
     Employee M("12442", "M", "London", 200000, "Head of R&D");
 
     James.printInfo();
 
-    M.printInfo();
+    M.printInfo();*/
 
 
     Person *James1 = new Person("007", "James Bond", "UK");
 
     Person* M1 = new Employee ("12442", "M", "London", 200000, "Head of R&D");
 
+   // James1->printInfo();
+
+    //M1->printInfo();// dynamic binding 
+
+    Person** list1 = new Person * [2];
+
+    list1[0] = James1;
+    list1[1] = M1; 
+
+    for (int i = 0; i < 2; i++)
+    {   
+        list1[i]->printInfo();
+        cout << endl; 
+    }
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
